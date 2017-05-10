@@ -1,0 +1,55 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mini_App"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Mini_App.index"
+        mc:Ignorable="d"
+        Title="Quản lý bán hàng" Height="720" Width="1280" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <dxmvvm:Interaction.Behaviors>
+        <dx:DXSplashScreenService ShowSplashScreenOnLoading="True" SplashScreenType="{x:Type local:SplashScreenView}"/>
+    </dxmvvm:Interaction.Behaviors>
+    <Grid>
+        <GroupBox x:Name="groupBox" Header="Danh sách bàn" HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="640">
+            <Grid Height="675" VerticalAlignment="Top" Width="630" Margin="0,0,0,-7">
+                <Button x:Name="btn_ban1" Content="Bàn 1" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Loaded="btn_ban1_Loaded"/>
+                <Button x:Name="btn_ban2" Content="Bàn 2" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="155,0,0,0" Loaded="btn_ban2_Loaded"/>
+                <Button x:Name="btn_ban3" Content="Bàn 3" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="310,0,0,0" Loaded="btn_ban3_Loaded"/>
+                <Button x:Name="btn_ban4" Content="Bàn 4" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="465,0,0,0" Loaded="btn_ban4_Loaded"/>
+                <Button x:Name="btn_ban5" Content="Bàn 5" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="0,155,0,0" Loaded="btn_ban5_Loaded"/>
+                <Button x:Name="btn_ban6" Content="Bàn 6" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="155,155,0,0" Loaded="btn_ban6_Loaded"/>
+                <Button x:Name="btn_ban7" Content="Bàn 7" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="310,155,0,0" Loaded="btn_ban7_Loaded"/>
+                <Button x:Name="btn_ban8" Content="Bàn 8" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="465,155,0,0" Loaded="btn_ban8_Loaded"/>
+                <Button x:Name="btn_ban9" Content="Bàn 9" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="0,310,0,0" Loaded="btn_ban9_Loaded"/>
+                <Button x:Name="btn_ban10" Content="Bàn 10" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="155,310,0,0" Loaded="btn_ban10_Loaded"/>
+                <Button x:Name="btn_ban11" Content="Bàn 11" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="310,310,0,0" Loaded="btn_ban11_Loaded"/>
+                <Button x:Name="btn_ban12" Content="Bàn 12" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="465,310,0,0" Loaded="btn_ban12_Loaded"/>
+                <Button x:Name="btn_ban13" Content="Bàn 13" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="0,465,0,0" Loaded="btn_ban13_Loaded"/>
+                <Button x:Name="btn_ban14" Content="Bàn 14" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="155,465,0,0" Loaded="btn_ban14_Loaded"/>
+                <Button x:Name="btn_ban15" Content="Bàn 15" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="310,465,0,0" Loaded="btn_ban15_Loaded"/>
+                <Button x:Name="btn_Menu" Content="Menu" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Margin="465,465,0,0"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBox1" Header="Chi tiết order" HorizontalAlignment="Left" Height="366" Margin="645,0,0,0" VerticalAlignment="Top" Width="625">
+            <Grid Height="322" VerticalAlignment="Top" Width="615" Margin="0,0,0,-8">
+                <DataGrid x:Name="dgv_NoiDung" HorizontalAlignment="Left" Height="207" Margin="10,80,0,0" VerticalAlignment="Top" Width="595"/>
+                <Label x:Name="lb_TongTien" Content="Tổng tiền:" HorizontalAlignment="Left" Height="30" Margin="465,292,0,0" VerticalAlignment="Top" Width="140"/>
+                <TextBlock x:Name="tbx_BanDuocChon" HorizontalAlignment="Left" Height="34" Margin="10,10,0,0" TextWrapping="Wrap" Text="Tên bàn được chọn" VerticalAlignment="Top" Width="101"/>
+                <Button x:Name="btn_In" Content="In Hóa Đơn" HorizontalAlignment="Left" Height="48" Margin="465,10,0,0" VerticalAlignment="Top" Width="140"/>
+                <Button x:Name="btn_ThanhToan" Content="Thanh Toán" HorizontalAlignment="Left" Height="48" Margin="320,10,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.318,0.604"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBox2" Header="Thêm order" Height="271" Margin="821,371,59,0" VerticalAlignment="Top">
+            <Grid Height="218" VerticalAlignment="Top" Width="625">
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="33" Margin="10,10,0,0" TextWrapping="Wrap" Text="Tên Bàn Được Chọn:" VerticalAlignment="Top" Width="94"/>
+                <ComboBox x:Name="cbx_TenBan" HorizontalAlignment="Left" Height="27" Margin="147,10,0,0" VerticalAlignment="Top" Width="218" Foreground="Black"/>
+                <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Height="33" Margin="10,68,0,0" TextWrapping="Wrap" Text="Tên Đồ Uống Được Chọn" VerticalAlignment="Top" Width="94"/>
+                <ComboBox x:Name="cbx_TenDoUong" HorizontalAlignment="Left" Height="27" Margin="147,68,0,0" VerticalAlignment="Top" Width="218"/>
+                <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Height="33" Margin="15,107,0,0" TextWrapping="Wrap" Text="Số Lượng" VerticalAlignment="Top" Width="94"/>
+                <Custom:NumericUpDown x:Name="tbx_SoLuong" HorizontalAlignment="Left" Height="42" Margin="150,107,0,0" VerticalAlignment="Top" Width="215" Maximum="1000" Minimum="1" Value="1"/>
+                <Button x:Name="btn_ThemOrder" Content="Thêm order" HorizontalAlignment="Left" Height="41" Margin="15,167,0,0" VerticalAlignment="Top" Width="353"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
