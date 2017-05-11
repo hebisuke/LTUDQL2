@@ -7,6 +7,7 @@
     </Key>
     <Property Name="MaDonHang" Type="int" Nullable="false" />
     <Property Name="MaDoUong" Type="int" Nullable="false" />
+    <Property Name="TenDoUong" Type="nvarchar" MaxLength="50" />
     <Property Name="SoLuong" Type="int" />
     <Property Name="TongTien" Type="decimal" Precision="18" Scale="0" />
   </EntityType>
@@ -27,6 +28,16 @@
     <Property Name="MaDoUong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenDoUong" Type="nvarchar" MaxLength="50" />
     <Property Name="GiaTien" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -96,6 +107,7 @@
     <EntitySet Name="ChiTietDonHang" EntityType="Self.ChiTietDonHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DonHang" EntityType="Self.DonHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ThongTinBan" EntityType="Self.ThongTinBan" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_ChiTietDonHang_DonHang" Association="Self.FK_ChiTietDonHang_DonHang">

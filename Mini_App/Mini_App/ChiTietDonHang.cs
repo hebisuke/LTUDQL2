@@ -18,6 +18,7 @@ namespace Mini_App
         public int MaDoUong { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<decimal> TongTien { get; set; }
+        public string TenDoUong { get; set; }
     
         public virtual DonHang DonHang { get; set; }
         public virtual Menu Menu { get; set; }

@@ -14,6 +14,7 @@
         <AssociationConnector Association="TakeAwayPOSModel.FK_ChiTietDonHang_Menu" ManuallyRouted="false" />
         <AssociationConnector Association="TakeAwayPOSModel.FK_DonHang_TaiKhoan" ManuallyRouted="false" />
         <AssociationConnector Association="TakeAwayPOSModel.FK_DonHang_ThongTinBan" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TakeAwayPOSModel.sysdiagram" Width="1.5" PointX="5.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

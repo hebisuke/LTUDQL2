@@ -11,6 +11,7 @@
     <Property Name="TongTien" Type="Decimal" Precision="18" Scale="0" />
     <NavigationProperty Name="DonHang" Relationship="Self.FK_ChiTietDonHang_DonHang" FromRole="ChiTietDonHang" ToRole="DonHang" />
     <NavigationProperty Name="Menu" Relationship="Self.FK_ChiTietDonHang_Menu" FromRole="ChiTietDonHang" ToRole="Menu" />
+    <Property Name="TenDoUong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="DonHang">
     <Key>
@@ -122,5 +123,16 @@
       <End Role="ThongTinBan" EntitySet="ThongTinBans" />
       <End Role="DonHang" EntitySet="DonHangs" />
     </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="TakeAwayPOSModel.sysdiagram" />
   </EntityContainer>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>

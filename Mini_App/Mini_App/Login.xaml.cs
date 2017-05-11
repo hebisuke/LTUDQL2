@@ -38,7 +38,8 @@ namespace Mini_App
             if(a.Count()>0)
             {
                 MessageBox.Show("Đăng nhập thành công!");
-                index frmindex = new index();
+                var manv = from tk in db.TaiKhoans where tk.Username == tbx_TenDangNhap.Text select tk.ID;
+                index frmindex = new index( manv.ToList().FirstOrDefault() );
                 frmindex.Show();
                 this.Close();
             }

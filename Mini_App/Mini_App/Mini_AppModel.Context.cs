@@ -30,5 +30,6 @@ namespace Mini_App
         public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<ThongTinBan> ThongTinBans { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }
