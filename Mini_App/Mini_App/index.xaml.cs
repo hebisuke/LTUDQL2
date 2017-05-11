@@ -22,6 +22,7 @@ namespace Mini_App
     {
         TakeAwayPOSEntities db = new TakeAwayPOSEntities();
         int MaNhanVien = 1;
+        int MaBanDangChon = 0;
         public index( int manv)
         {
             InitializeComponent();
@@ -247,6 +248,7 @@ namespace Mini_App
         // dựa vào tình trạng =0 Đơn hàng và mã bàn
         private void btn_ban1_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 1;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 1";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 1 select dh.MaDonHang;
             if(madonhang.Count() >0)
@@ -272,6 +274,7 @@ namespace Mini_App
 
         private void btn_ban2_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 2;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 2";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 2 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -296,6 +299,7 @@ namespace Mini_App
 
         private void btn_ban3_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 3;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 3";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 3 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -320,6 +324,7 @@ namespace Mini_App
 
         private void btn_ban4_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 4;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 4";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 4 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -344,6 +349,7 @@ namespace Mini_App
 
         private void btn_ban5_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 5;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 5";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 5 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -368,6 +374,7 @@ namespace Mini_App
 
         private void btn_ban6_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 6;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 6";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 6 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -392,6 +399,7 @@ namespace Mini_App
 
         private void btn_ban7_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 7;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 7";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 7 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -416,6 +424,7 @@ namespace Mini_App
 
         private void btn_ban8_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 8;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 8";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 8 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -440,6 +449,7 @@ namespace Mini_App
 
         private void btn_ban9_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 9;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 9";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 9 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -464,6 +474,7 @@ namespace Mini_App
 
         private void btn_ban10_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 10;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 10";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 10 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -488,6 +499,7 @@ namespace Mini_App
 
         private void btn_ban11_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 11;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 11";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 11 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -512,6 +524,7 @@ namespace Mini_App
 
         private void btn_ban12_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 12;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 12";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 12 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -536,6 +549,7 @@ namespace Mini_App
 
         private void btn_ban13_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 13;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 13";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 13 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -560,6 +574,7 @@ namespace Mini_App
 
         private void btn_ban14_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 14;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 14";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 14 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -584,6 +599,7 @@ namespace Mini_App
 
         private void btn_ban15_Click(object sender, RoutedEventArgs e)
         {
+            MaBanDangChon = 15;
             tbx_BanDuocChon.Text = "Bàn đang chọn : Bàn 15";
             var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == 15 select dh.MaDonHang;
             if (madonhang.Count() > 0)
@@ -608,8 +624,9 @@ namespace Mini_App
 
         private void btn_Menu_Click(object sender, RoutedEventArgs e)
         {
-            //load menu
-            var lst = from mn in db.Menus select new { TenDoUong = mn.TenDoUong, GiaTien = mn.GiaTien };
+            MaBanDangChon = 0;
+               //load menu
+               var lst = from mn in db.Menus select new { TenDoUong = mn.TenDoUong, GiaTien = mn.GiaTien };
             dgv_NoiDung.ItemsSource = lst.ToList();
             tbx_BanDuocChon.Text = "Menu :";
             lb_TongTien.Content = "";
@@ -746,6 +763,87 @@ namespace Mini_App
             cbx_TenDoUong.SelectedValuePath = "MaDoUong";
             cbx_TenDoUong.DisplayMemberPath = "TenDoUong";
             
+        }
+
+        private void btn_ThanhToan_Click(object sender, RoutedEventArgs e)
+        {
+            // cập nhật tình trạng cho Đơn hàng , Thông tin bàn
+            if( MaBanDangChon ==0)
+            {
+                btn_Menu_Click(sender, e);
+                MessageBox.Show("Chưa chọn bàn cần thành toán");
+                return;
+            }
+            var a = (from ban in db.ThongTinBans where ban.MaBan == MaBanDangChon select ban).FirstOrDefault();
+            a.TinhTrang = "0";
+            db.SaveChanges();
+            var b = (from dh in db.DonHangs where dh.MaBan == MaBanDangChon && dh.TinhTrang == "0" select dh).FirstOrDefault();
+            b.TinhTrang = "1";
+            db.SaveChanges();
+            switch (MaBanDangChon)
+            {
+                case 1:
+                    btn_ban1_Loaded(sender, e);
+                    btn_ban1_Click(sender, e);
+                    break;
+                case 2:
+                    btn_ban2_Loaded(sender, e);
+                    btn_ban2_Click(sender, e);
+                    break;
+                case 3:
+                    btn_ban3_Loaded(sender, e);
+                    btn_ban3_Click(sender, e);
+                    break;
+                case 4:
+                    btn_ban4_Loaded(sender, e);
+                    btn_ban4_Click(sender, e);
+                    break;
+                case 5:
+                    btn_ban5_Loaded(sender, e);
+                    btn_ban5_Click(sender, e);
+                    break;
+                case 6:
+                    btn_ban6_Loaded(sender, e);
+                    btn_ban6_Click(sender, e);
+                    break;
+                case 7:
+                    btn_ban7_Loaded(sender, e);
+                    btn_ban7_Click(sender, e);
+                    break;
+                case 8:
+                    btn_ban8_Loaded(sender, e);
+                    btn_ban8_Click(sender, e);
+                    break;
+                case 9:
+                    btn_ban9_Loaded(sender, e);
+                    btn_ban9_Click(sender, e);
+                    break;
+                case 10:
+                    btn_ban10_Loaded(sender, e);
+                    btn_ban10_Click(sender, e);
+                    break;
+                case 11:
+                    btn_ban11_Loaded(sender, e);
+                    btn_ban11_Click(sender, e);
+                    break;
+                case 12:
+                    btn_ban12_Loaded(sender, e);
+                    btn_ban12_Click(sender, e);
+                    break;
+                case 13:
+                    btn_ban13_Loaded(sender, e);
+                    btn_ban13_Click(sender, e);
+                    break;
+                case 14:
+                    btn_ban14_Loaded(sender, e);
+                    btn_ban14_Click(sender, e);
+                    break;
+                case 15:
+                    btn_ban15_Loaded(sender, e);
+                    btn_ban15_Click(sender, e);
+                    break;
+            }
+            // cập nhật tình trạng cho Thông tin bàn
         }
     }
 }
