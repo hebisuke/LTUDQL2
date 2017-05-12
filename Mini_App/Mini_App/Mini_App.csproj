@@ -52,6 +52,10 @@
     <Reference Include="DevExpress.Utils.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v16.2.UI, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpf.Core.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Docking.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.DocumentViewer.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Printing.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Ribbon.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.Themes.DXStyle.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>False</Private>
     </Reference>
@@ -88,10 +92,12 @@
       <HintPath>..\packages\MaterialDesignThemes.2.3.0.823\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
@@ -126,6 +132,9 @@
     <Compile Include="DonHang.cs">
       <DependentUpon>Mini_AppModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DXPrintxaml.xaml.cs">
+      <DependentUpon>DXPrintxaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DXSplashScreen\SplashScreenView.xaml.cs">
       <DependentUpon>SplashScreenView.xaml</DependentUpon>
     </Compile>
@@ -140,6 +149,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Mini_AppModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="RyoCaffeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RyoCaffeReport.Designer.cs">
+      <DependentUpon>RyoCaffeReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Mini_AppModel.tt</DependentUpon>
     </Compile>
@@ -149,6 +164,10 @@
     <Compile Include="ThongTinBan.cs">
       <DependentUpon>Mini_AppModel.tt</DependentUpon>
     </Compile>
+    <Page Include="DXPrintxaml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DXSplashScreen\SplashScreenView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -198,6 +217,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RyoCaffeReport.resx">
+      <DependentUpon>RyoCaffeReport.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Mini_AppModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

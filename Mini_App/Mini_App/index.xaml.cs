@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using DevExpress.Xpf.Printing;
 namespace Mini_App
 {
     /// <summary>
@@ -844,6 +844,30 @@ namespace Mini_App
                     break;
             }
             // cập nhật tình trạng cho Thông tin bàn
+        }
+
+        private void btn_In_Click(object sender, RoutedEventArgs e)
+        {
+            if(MaBanDangChon ==0)
+            {
+                MessageBox.Show("Vui lòng chọn bàn cần in hóa đơn");
+                return;
+            }
+            var madonhang = from dh in db.DonHangs where dh.TinhTrang == "0" && dh.MaBan == MaBanDangChon select dh.MaDonHang;
+            if (madonhang.Count() > 0)
+            {
+                var TenBan = (from ban in db.ThongTinBans where ban.MaBan == MaBanDangChon select ban.TenBan).FirstOrDefault();
+                var lst = (from ct in db.ChiTietDonHangs where ct.MaDonHang == madonhang.FirstOrDefault() select ct).ToList();
+                DXPrintxaml print = new DXPrintxaml(TenBan, lst);
+                print.Show();
+            }
+            else
+            {
+                MessageBox.Show("Bàn trống!! Vui lòng tạo order mới");
+                dgv_NoiDung.ItemsSource = null;
+                lb_TongTien.Content = "Tổng tiền : 0";
+                return;
+            }
         }
     }
 }

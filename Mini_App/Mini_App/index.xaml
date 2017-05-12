@@ -36,7 +36,7 @@
                 <DataGrid x:Name="dgv_NoiDung" HorizontalAlignment="Left" Height="207" Margin="10,80,0,0" VerticalAlignment="Top" Width="595"/>
                 <Label x:Name="lb_TongTien" Content="Tổng tiền:" HorizontalAlignment="Left" Height="30" Margin="465,292,0,0" VerticalAlignment="Top" Width="140"/>
                 <TextBlock x:Name="tbx_BanDuocChon" HorizontalAlignment="Left" Height="34" Margin="10,10,0,0" TextWrapping="Wrap" Text="Tên bàn được chọn" VerticalAlignment="Top" Width="101"/>
-                <Button x:Name="btn_In" Content="In Hóa Đơn" HorizontalAlignment="Left" Height="48" Margin="465,10,0,0" VerticalAlignment="Top" Width="140"/>
+                <Button x:Name="btn_In" Content="In Hóa Đơn" HorizontalAlignment="Left" Height="48" Margin="465,10,0,0" VerticalAlignment="Top" Width="140" Click="btn_In_Click"/>
                 <Button x:Name="btn_ThanhToan" Content="Thanh Toán" HorizontalAlignment="Left" Height="48" Margin="320,10,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.318,0.604" Click="btn_ThanhToan_Click"/>
             </Grid>
         </GroupBox>
